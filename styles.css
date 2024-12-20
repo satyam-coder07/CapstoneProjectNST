@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background: white;
+    padding: 1rem 5%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #5a189a;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #5a189a;
+}
+
+
+#hero {
+    padding: 8rem 5% 4rem;
+    text-align: center;
+}
+
+#hero h1 {
+    font-size: 3.5rem;
+    color: #5a189a;
+    margin-bottom: 2rem;
+}
+
+.hero-image {
+    background: url('https://source.unsplash.com/random/1200x600?graffiti') center/cover;
+    height: 400px;
+    border-radius: 15px;
+    margin: 2rem auto;
+}
+
+#portfolio {
+    padding: 4rem 5%;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.gallery-item h3 {
+    padding: 1rem;
+    margin: 0;
+    color: #5a189a;
+}
+
+.gallery-item p {
+    padding: 0 1rem 1rem;
+    color: #666;
+}
+
+
+#contact {
+    padding: 4rem 5%;
+    text-align: center;
+    background: #f8f9fa;
+}
+
+#contact h2 {
+    color: #5a189a;
+    margin-bottom: 1rem;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+.form-grid {
+    
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-grid input {
+    height: 64px;
+    width: 56px;
+    padding: 0.5rem;
+    border: 1px solid #440A8F;
+    border-radius: 5px;
+    text-align: center;
+}
+
+button {
+    background-color: #5a189a;
+    color: #ffffff;
+    border: 0;
+    padding: 0.8em 2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+button:hover {
+    background: #4c157d;
+}
+
+.beta {
+    color: #666;
+    margin-top: 1rem;
+}
+
+#testimonials {
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+#testimonials h2 {
+    color: #5a189a;
+    margin-bottom: 2rem;
+}
+
+.testimonials-container {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    padding: 1rem;
+}
+
+.testimonial {
+    flex: 0 0 250px;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.testimonial img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.testimonial p {
+    margin: 0.5rem 0;
+    color: #333;
+}
+
+.testimonial span {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5%;
+    background: #f8f9fa;
+}
+
+.contact-btn {
+    background: transparent;
+    color: #5a189a;
+    border: 2px solid #5a189a;
+}
+
+.contact-btn:hover {
+    background: #5a189a;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        gap: 1rem;
+    }
+
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .testimonials-container {
+        flex-direction: column;
+    }
+
+    .testimonial {
+        flex: none;
+    }
+}
